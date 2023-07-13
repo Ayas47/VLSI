@@ -1,0 +1,32 @@
+USER SYMBOL by DSCH 3.5
+DATE 7/8/2023 5:29:52 PM
+SYM  #Comparator
+BB(0,0,20,40)
+TITLE 10 -7  #Comparator
+MODEL 6000
+REC(5,5,10,30)
+PIN(0,10,0.00,0.00)A
+PIN(0,20,0.00,0.00)B
+PIN(20,30,2.00,1.00)L
+PIN(20,20,2.00,1.00)G
+PIN(20,10,2.00,1.00)E
+LIG(0,10,5,10)
+LIG(0,20,5,20)
+LIG(15,30,20,30)
+LIG(15,20,20,20)
+LIG(15,10,20,10)
+LIG(5,5,5,35)
+LIG(5,5,15,5)
+LIG(15,5,15,35)
+LIG(15,35,5,35)
+VLG module Comparator( A,B,L,G,E);
+VLG  input A,B;
+VLG  output L,G,E;
+VLG  wire w5,w8;
+VLG  not #(1) inv_1(w5,A);
+VLG  not #(1) inv_2(w8,B);
+VLG  xnor #(2) xnor2_3(E,A,B);
+VLG  and #(2) and2_4(G,w8,A);
+VLG  and #(2) and2_5(L,B,w5);
+VLG endmodule
+FSYM

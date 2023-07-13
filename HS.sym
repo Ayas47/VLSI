@@ -1,0 +1,28 @@
+USER SYMBOL by DSCH 3.5
+DATE 7/7/2023 6:19:42 PM
+SYM  #HS
+BB(0,0,40,30)
+TITLE 10 -7  #HS
+MODEL 6000
+REC(5,5,30,20)
+PIN(0,10,0.00,0.00)A
+PIN(0,20,0.00,0.00)B
+PIN(40,20,2.00,1.00)BO
+PIN(40,10,2.00,1.00)DIFF
+LIG(0,10,5,10)
+LIG(0,20,5,20)
+LIG(35,20,40,20)
+LIG(35,10,40,10)
+LIG(5,5,5,25)
+LIG(5,5,35,5)
+LIG(35,5,35,25)
+LIG(35,25,5,25)
+VLG module HS( A,B,BO,DIFF);
+VLG  input A,B;
+VLG  output BO,DIFF;
+VLG  wire w5,;
+VLG  xor #(1) xor2_1(DIFF,A,B);
+VLG  and #(1) and2_2(BO,w5,B);
+VLG  not #(1) inv_3(w5,A);
+VLG endmodule
+FSYM
